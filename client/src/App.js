@@ -1,10 +1,14 @@
 import abi from "./contract/chai.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
+
+import "./App.css";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 import Buy from "./components/Buy";
 import Memos from "./components/Memos";
-import chai from "./chai.jpg";
-import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [state, setState] = useState({
@@ -55,24 +59,20 @@ function App() {
   }, []);
   // console.log(state);
   return (
-    <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
-      <img
-        src={chai}
-        className="img-fluid"
-        alt=".."
-        width="100%"
-      />
-      <p
-        class="text-muted lead "
-        style={{ marginTop: "10px", marginLeft: "5px" }}
-      >
-        <small>Connected Account - {account}</small>
-      </p>
-      <div className="container">
-        <Buy state={state} />
-        <Memos state={state} />
-      </div>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <section className="my-10 mx-10 sm:mt-10 md:drop-shadow-lg tracking-wider flex items-center justify-center ">
+        <div className="px-4 sm:py-4 md:px-8 my-20 mx-24 text-center md:rounded-full bg-yellow-200  w-2/3 ">
+          <span className="font-circular text-lg md:text-2xl text-gray-600 leading-normal">
+            connected account :- {account}
+          </span>
+        </div>
+      </section>
+      <Buy state={state}></Buy>
+      <Memos state={state}></Memos>
+      <Footer></Footer>
+    </>
   );
 }
 
