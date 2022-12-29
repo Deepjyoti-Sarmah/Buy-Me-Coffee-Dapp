@@ -9,7 +9,7 @@ const Hero = () => {
                         A supporter is worth a thousand followers.
                     </h1>
                     <p className="font-circular md:max-w-2xl md:mx-auto my-6 text-lg md:text-2xl text-gray-600 leading-normal">
-                        A Decentralized clone of Buy me a Coffee
+                        A Decentralized application of Buy me a Coffee
                     </p>
                 </article>
             </section>

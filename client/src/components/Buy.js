@@ -38,8 +38,8 @@ const Buy = ({ state }) => {
                         placeholder="Enter your Message"
                         />
                     </div>
-                    <div className="flex items-center justify-center py-4 md:drop-shadow-lg tracking-wider ">
-                        <button disabled = {!state.contract} type= "submit" className="bg-[#96D4D4] rounded-full  w-full lg:w-[25%] my-3 py-3 md:text-xl on-button-hover-effect ">
+                    <div className="flex items-center justify-center my-10 py-4 md:drop-shadow-lg tracking-wider ">
+                        <button disabled = {!state.contract} type= "submit" className="bg-[#96D4D4] rounded-full w-[25%] my-3 py-3 md:text-xl">
                             {" "}
                             Buy  ☕  for 0.001 ETH ♦{" "}
                         </button>
